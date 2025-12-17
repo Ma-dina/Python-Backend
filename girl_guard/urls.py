@@ -7,17 +7,17 @@ from girl_guard import settings
 
 
 schema_view = get_schema_view(
-    openapi.Info(
-        title='shop api',
-        description='makers',
-        default_version='v1'
-    ),
-    public=True
+openapi.Info(
+    title='shop api',
+    description='makers',
+    default_version='v1'
+),
+public=True
 )
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('docs/', schema_view.with_ui('swagger')),
-    path('api/v1/account/', include('account.urls')),
+path('admin/', admin.site.urls),
+path('docs/', schema_view.with_ui('swagger')),
+path('api/v1/account/', include('account.urls')),
 ]
